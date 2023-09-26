@@ -2,7 +2,7 @@
 
 * This is only tested on Windows 7 and 10.
 * You can *theoretically* compile this for Mac OSX, but it seems like over the  past 5-6 years, OS updates broke some esoteric thing in the build chain so I could never get the game to compile after 2016/7. If someone can figure this out that would be amazing!!
-* In theory you can compile a Haxe project for Linux but for some reason I couldn't figure it out. I would love for this to run on Linux though.
+[Linux Instructions](##Linux Instructions)
 
 ### Step 1: Installing Haxe
 
@@ -55,3 +55,20 @@ Otherwise:
 ### Step 7: Hit "Compile" And Pray
 
 1. The first time will take a while. If all works the game should start! Hooray!
+
+## Linux Instructions
+### Step 1: Installing Haxe
+IMPORTANT: Make sure to choose a path you have write access to when prompted for a haxe directory   
+```
+cd "Open Source Assets"
+./installHaxe.sh
+```
+This downloads haxe 3.4.7, neko 2.1.0, installs the libraries, builds hxcpp, and applies the engine changes to flixel.
+### Step 2: Build
+```
+cd "Open Source Assets"
+./build.sh
+```
+This starts the game compilation. If it's your first time, it'll take a while.   
+When it's done, you can find the game binary in export/linux64/cpp/bin/EventheOcean   
+If you wish to remove haxe afterwards, run "removeHaxe.sh" in "Open Source Assets/". Be sure to remove the environment variables from your .bashrc!
